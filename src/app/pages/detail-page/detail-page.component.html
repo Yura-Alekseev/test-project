@@ -1,0 +1,12 @@
+<div *ngIf="userData"
+     class="card"
+     style="width: 250px">
+  <img [src]="userData.avatar_url" class="card-img-top" alt="avatar">
+  <div class="card-body">
+    <h5 class="card-title">{{userData.name}}</h5>
+    <p class="card-text">User type: {{userData.type}}</p>
+    <a [href]="userData.html_url"
+       target="_blank"
+       class="btn btn-primary">GitHub Profile</a>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<app-search (searchInputChanged)="onSearchInputChanged($event)"></app-search>
+
+<table class="table" *ngIf="usersData && usersData.length > 0">
+  <thead>
+  <tr>
+    <th scope="col">Login</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of usersData">
+    <th scope="row">
+      <a [routerLink]="'/detail/' + user.login">{{user.login}}</a>
+    </th>
+  </tr>
+  </tbody>
+</table>

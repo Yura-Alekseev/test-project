@@ -1,0 +1,9 @@
+<app-search (searchInputChanged)="onSearchInputChanged($event)"></app-search>
+
+<ul *ngIf="usersData && usersData.length > 0"
+  class="list-group">
+  <li *ngFor="let user of usersData"
+    class="list-group-item">
+    <a [routerLink]="'/detail/' + user.login">{{user.login}}</a>
+  </li>
+</ul>
